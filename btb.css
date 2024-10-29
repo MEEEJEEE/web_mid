@@ -1,68 +1,113 @@
-/* style.css */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #fffce7, #f9f9f9);
+    line-height: 1.8;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-}
-
-.text-section {
-    max-width: 50%;
+.first-page, .second-page, .card-container {
+    padding: 20px;
+    text-align: center;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 48px;
     color: #2D74AF;
+    font-weight: bold;
 }
 
 .subtitle {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
+    font-size: 20px;
+    color: #2D74AF;
+    margin-bottom: 40px;
 }
 
-.icon-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icon-row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icon {
-    width: 50px;
-    height: 50px;
-    background-color: #d4af37;
-    border-radius: 50%;
+.icon-container, .card-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #0E366E;
     font-weight: bold;
-    font-size: 1.2rem;
-    color: white;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.icon:hover {
-    transform: scale(1.1);
-    background-color: #2D74AF;
+/* Hover 효과 */
+.card:hover {
+    transform: scale(1.05);
 }
 
-.line {
-    height: 2px;
-    width: 50px;
-    background-color: #ccc;
+.icon img {
+    width: 80px;
+    height: 80px;
 }
 
-.active {
-    background-color: #2D74AF;
+.icon-title {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #0069B7;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+/* 공통 Footer 스타일 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.footer .footer-info {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.footer .footer-info p {
+    margin: 0;
+    color: #ccc;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer .social-icons img {
+    width: 20px;
+    height: 20px;
 }
