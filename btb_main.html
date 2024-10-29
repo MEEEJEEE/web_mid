@@ -4,7 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond the Boundary</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 배경색 그라데이션 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+        }
+
+        /* 전체 페이지의 배경색 및 스크롤 스무스 효과 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 첫 페이지 배경 및 스타일 */
+        .first-page {
+            background: linear-gradient(to bottom, #FFFACD, #FFFFFF);
+            color: black;
+            padding: 50px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 첫 페이지 텍스트 스타일 */
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #2D74AF;
+            font-family: 'Verdana', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #2D74AF;
+            margin-bottom: 40px;
+        }
+
+        .content {
+            text-align: left;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 두 번째 페이지 배경 및 레이아웃 */
+        .second-page {
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        /* 두 번째 페이지 컨테이너 스타일 */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 좌측 텍스트 섹션 */
+        .text-section {
+            max-width: 50%;
+        }
+
+        /* 아이콘 섹션 스타일 */
+        .icon-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .icon img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .icon-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .submenu {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .icon:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            display: block;
+            font-size: 14px;
+            color: #0066cc;
+            text-decoration: none;
+            margin: 4px 0;
+        }
+
+        .submenu a:hover {
+            text-decoration: underline;
+        }
+
+        /* 반응형 디자인 */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .title {
+                font-size: 36px;
+            }
+            .subtitle {
+                font-size: 16px;
+            }
+            .content {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -21,7 +164,71 @@
             <p>비욘드더바운더리는 그런 필요성에 절감했고 생겨났습니다.</p>
             <p>대한민국, 통일 그리고 그 주인공인 북한이탈주민과 청년들에게 꼭 필요한 비욘드더바운더리가 되겠습니다.</p>
         </div>
-        <a href="solutions.html" class="next-page-link">다음 페이지로 이동</a>
+    </section>
+
+    <!-- 두 번째 페이지 -->
+    <section class="second-page">
+        <div class="container">
+            <!-- 좌측 설명 섹션 -->
+            <div class="text-section">
+                <h2>Modular solutions</h2>
+                <h3>A fully integrated suite of financial and payments products</h3>
+                <p>Reduce costs, grow revenue, and run your business more efficiently on a fully integrated platform. Use our platform to handle all of your payment-related needs, manage revenue operations, and launch new business models.</p>
+            </div>
+
+            <!-- 우측 아이콘 섹션 -->
+            <div class="icon-container">
+                <!-- 파트너 아이콘 -->
+                <div class="icon">
+                    <img src="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/partners.png" alt="파트너">
+                    <div class="icon-title">파트너</div>
+                    <div class="submenu">
+                        <a href="https://blog.naver.com/koreaconsensus/222056018830" target="_blank">한반도정책컨센서스</a>
+                        <a href="https://www.youtube.com/channel/UCQPWKFepcH_Td8xxFvIfz6Q" target="_blank">북시탈스튜디오</a>
+                        <a href="https://nkdb.org/" target="_blank">NKDB 북한인권정보센터</a>
+                        <a href="#">The Messenger</a>
+                    </div>
+                </div>
+
+                <!-- 소식 아이콘 -->
+                <div class="icon">
+                    <img src="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/news.png" alt="소식">
+                    <div class="icon-title">소식</div>
+                    <div class="submenu">
+                        <a href="#">공지사항</a>
+                        <a href="#">소식지</a>
+                        <a href="#">자주 묻는 질문</a>
+                        <a href="#">공개정보</a>
+                    </div>
+                </div>
+
+                <!-- 후원 아이콘 -->
+                <div class="icon">
+                    <img src="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/donation.png" alt="후원">
+                    <div class="icon-title">후원</div>
+                    <div class="submenu">
+                        <a href="#">후원 문의</a>
+                        <a href="#">연간 기부금 모금액 및 사용실적</a>
+                    </div>
+                </div>
+
+                <!-- 소개 아이콘 -->
+                <div class="icon">
+                    <img src="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/introduce.png" alt="소개">
+                    <div class="icon-title">소개</div>
+                    <div class="submenu">
+                        <a href="#">비더비 소개</a>
+                        <a href="#">정관</a>
+                        <a href="#">인사말</a>
+                        <a href="#">CI 및 슬로건</a>
+                        <a href="#">연혁</a>
+                        <a href="#">함께하는 사람들</a>
+                        <a href="#">BTB 운영위원</a>
+                        <a href="#">오시는길</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
 </body>
