@@ -245,3 +245,91 @@ body, .english-text {
         font-size: 16px;
     }
 }
+/* Timeline Section */
+.history-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.history-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2D74AF;
+    margin-bottom: 40px;
+}
+
+/* Timeline container */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.timeline-year {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2D74AF;
+    margin-right: 20px;
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+}
+
+/* Vertical line on the left */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #2D74AF;
+}
+
+.timeline-item:first-child .timeline-content {
+    margin-top: 0;
+}
+
+/* Hover effect */
+.timeline-item:hover .timeline-content {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 0 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-year {
+        width: auto;
+        margin-bottom: 10px;
+    }
+}

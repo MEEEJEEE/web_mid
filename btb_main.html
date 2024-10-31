@@ -5,173 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond the Boundary</title>
     <link rel="stylesheet" href="btb.css">
-    
-    <style>
-        /* 배경색 그라데이션 */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.8;
-        }
-
-        /* 전체 페이지의 배경색 및 스크롤 스무스 효과 */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* 첫 페이지 배경 및 스타일 */
-        .first-page {
-            background: linear-gradient(to bottom, #FFFACD, #FFFFFF);
-            color: black;
-            padding: 50px;
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* 첫 페이지 텍스트 스타일 */
-        .title {
-            font-size: 48px;
-            font-weight: bold;
-            color: #2D74AF;
-            font-family: 'Verdana', sans-serif;
-            margin-bottom: 20px;
-        }
-
-        .subtitle {
-            font-size: 20px;
-            color: #2D74AF;
-            margin-bottom: 40px;
-        }
-
-        .content {
-            text-align: left;
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* 두 번째 페이지 배경 및 레이아웃 */
-        .second-page {
-            background-color: #f5f5f5;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px;
-        }
-
-        /* 두 번째 페이지 컨테이너 스타일 */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1000px;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        /* 좌측 텍스트 섹션 */
-        .text-section {
-            max-width: 50%;
-        }
-
-        /* 아이콘 섹션 스타일 */
-        .icon-container {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .icon:hover {
-            transform: scale(1.1);
-        }
-
-        .icon img {
-            width: 80px;
-            height: 80px;
-        }
-
-        .icon-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 10px;
-            color: #333;
-        }
-
-        .submenu {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .icon:hover .submenu {
-            display: block;
-        }
-
-        .submenu a {
-            display: block;
-            font-size: 14px;
-            color: #0066cc;
-            text-decoration: none;
-            margin: 4px 0;
-        }
-
-        .submenu a:hover {
-            text-decoration: underline;
-        }
-
-        /* 반응형 디자인 */
-        @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .title {
-                font-size: 36px;
-            }
-            .subtitle {
-                font-size: 16px;
-            }
-            .content {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <link rel="icon" href="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/btb.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/btb.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- 고정 헤더 섹션 -->
+    <header class="header">
+        <img src="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/btb.logo.png" alt="로고">
+        <nav>
+            <ul>
+                <li><a href="#">파트너</a>
+                    <ul>
+                        <li><a href="https://blog.naver.com/koreaconsensus/222056018830" target="_blank">한반도정책컨센서스</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCQPWKFepcH_Td8xxFvIfz6Q" target="_blank">북시탈스튜디오</a></li>
+                        <li><a href="https://nkdb.org/" target="_blank">NKDB 북한인권정보센터</a></li>
+                        <li><a href="#">The Messenger</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">소식</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">소식지</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">공개정보</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">후원</a>
+                    <ul>
+                        <li><a href="#">후원 문의</a></li>
+                        <li><a href="#">연간 기부금 모금액 및 사용실적</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">소개</a>
+                    <ul>
+                        <li><a href="#">비더비 소개</a></li>
+                        <li><a href="#">정관</a></li>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">CI 및 슬로건</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">함께하는 사람들</a></li>
+                        <li><a href="#">BTB 운영위원</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a href="#">로그인</a>
+    </header>
 
-    <!-- 첫 번째 페이지 -->
-    <section class="first-page">
-        <div class="title">BEYOND THE BOUNDARY</div>
-        <div class="subtitle">경계를 넘어 통합을 이루는 전진기지</div>
-        
-        <div class="content">
-            <p>비욘드더바운더리는 한국 사회의 분열과 단절을 극복하고 나아가 사회통합을 실현하고 미래 통일을 준비하고 있는 비영리단체 입니다.</p>
+    <!-- 첫 번째 섹션 -->
+    <section class="content-section">
+        <h1 class="title appear">BEYOND THE BOUNDARY</h1>
+        <h2 class="subtitle appear">경계를 넘어 통합을 이루는 전진기지</h2>
+        <div class="text-content appear">
+            <p>비욘드더바운더리는 한국 사회의 분열과 단절을 극복하고 나아가 사회통합을 실현하고 미래 통일을 준비하고 있는 비영리단체입니다.</p>
             <p>사회통합에 기여할 수 있는 북한이탈주민, 청년활동가와 신진연구자들을 위한 클러스터를 구축하고 체계적인 지원을 제공함으로써 한반도 통일과 남북 통합에 기여하고 한국 사회의 미래를 이끌어 갈 차세대 청년들을 지원하는 사업을 목적으로 하고 있습니다.</p>
-            <p>대한민국은 70년 간의 분단 상태에서 평화공존과 궁극적인 통일을 추구해야 하지만, 내부적으로 사회의 양극화된 분열과 구성원 간의 대립, 갈등으로 심화되고 있어 한반도의 평화적 통일에 걸림돌이 되고 있습니다.</p>
-            <p>북한이탈주민을 필두로 대한민국 청년들의 사회참여와 시민활동가적 역량은 이러한 사회적 갈등을 해소할 수 있는 잠재력과 사회 발전의 새로운 동력입니다. 또한, 이들이 미래 남북 통일 시대에 사회적 화합을 이끄는 주력이기 때문에, 청년들의 시민활동가적 역량을 증진시키고 지속적으로 성장할 수 있는 환경이 확대되어야 합니다.</p>
-            <p>비욘드더바운더리는 그런 필요성에 절감했고 생겨났습니다.</p>
-            <p>대한민국, 통일 그리고 그 주인공인 북한이탈주민과 청년들에게 꼭 필요한 비욘드더바운더리가 되겠습니다.</p>
         </div>
     </section>
 
-    <!-- 두 번째 페이지 -->
+    <!-- 두 번째 섹션 -->
     <section class="second-page">
         <div class="container">
-            <!-- 좌측 설명 섹션 -->
             <div class="text-section">
                 <h2>비욘드더바운더리가 하는 일</h2>
                 <h3>비욘드더바운더리는 북한이탈주민과 통일을 준비하는 청년의 취업과 창업을 지원하기 위한 '공간 제공 사업'과 대한민국을 지탱하는 시민활동가적 역량을 위한 '청년 육성 사업'을 통해 한반도의 미래를 준비하고 있습니다.</h3>
@@ -183,7 +77,6 @@
                 <p>비욘드더바운더리는 정치, 경제, 복지, 문화, 교육, 언론, 외교, 의학, 환경 등 다양한 분야에 있는 전문가 네트워크를 통해 파트너에게 필요한 컨설팅 및 교육을 진행합니다. 활동을 지속하는 데 필요한 펀딩을 연결 및 다양한 제안서 컨설팅까지 함께 하고 있습니다.</p>
             </div>
 
-            <!-- 우측 아이콘 섹션 -->
             <div class="icon-container">
                 <!-- 파트너 아이콘 -->
                 <div class="icon">
@@ -239,6 +132,18 @@
             </div>
         </div>
     </section>
-    
+
+<script>
+    // 스크롤 시 서서히 나타나는 효과
+    const items = document.querySelectorAll('.appear');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+            }
+        });
+    });
+    items.forEach(item => observer.observe(item));9
+</script>
 </body>
 </html>
