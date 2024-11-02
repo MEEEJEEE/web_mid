@@ -1,13 +1,13 @@
-/* Reset and Basic Styling */
+/* 기본 초기화 및 폰트 설정 */
 body, .english-text {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.8;
     background: linear-gradient(to bottom, #fffae5, #ffffff);
-    font-family: 'Swagger', sans-serif; /* Apply Swagger font */
+    font-family: 'Swagger', sans-serif; /* Swagger 폰트 적용 */
 }
 
-/* General Layout */
+/* 일반 레이아웃 설정 */
 .container {
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ body, .english-text {
     gap: 20px;
 }
 
-/* Header Styling */
+/* 헤더 스타일 */
 .header {
     display: flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@ body, .english-text {
     padding: 8px;
 }
 
-/* Dropdown Menu */
+/* 드롭다운 메뉴 */
 .header nav ul li ul {
     display: none;
     position: absolute;
@@ -78,7 +78,7 @@ body, .english-text {
     display: block;
 }
 
-/* Section and Title Styles */
+/* 섹션 및 제목 스타일 */
 .content-section, .first-page, .second-page, .card-container {
     text-align: center;
     padding: 60px 20px;
@@ -91,7 +91,7 @@ body, .english-text {
     font-size: 48px;
     color: #2D74AF;
     font-weight: bold;
-    opacity: 0; /* Initially hidden */
+    opacity: 0; /* 처음에는 숨김 */
     transition: opacity 1.5s ease;
 }
 
@@ -114,7 +114,7 @@ body, .english-text {
     transition: opacity 1.5s ease 1s;
 }
 
-/* Icon and Submenu Styling */
+/* 아이콘과 서브메뉴 스타일 */
 .icon-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -163,7 +163,7 @@ body, .english-text {
     border-radius: 5px;
 }
 
-/* Card Styling */
+/* 카드 스타일 */
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -193,7 +193,7 @@ body, .english-text {
     transform: scale(1.05);
 }
 
-/* Footer Styling */
+/* 푸터 스타일 */
 .footer {
     background-color: #333;
     color: #fff;
@@ -224,12 +224,12 @@ body, .english-text {
     height: 20px;
 }
 
-/* Scroll Animation */
+/* 스크롤 애니메이션 */
 .appear {
     opacity: 1 !important;
 }
 
-/* Responsive Design */
+/* 반응형 디자인 */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -245,7 +245,8 @@ body, .english-text {
         font-size: 16px;
     }
 }
-/* Timeline Section */
+
+/* 타임라인 섹션 */
 .history-section {
     padding: 50px;
     background-color: #f9f9f9;
@@ -259,7 +260,6 @@ body, .english-text {
     margin-bottom: 40px;
 }
 
-/* Timeline container */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -296,7 +296,6 @@ body, .english-text {
     width: 100%;
 }
 
-/* Vertical line on the left */
 .timeline::before {
     content: '';
     position: absolute;
@@ -307,29 +306,79 @@ body, .english-text {
     background-color: #2D74AF;
 }
 
-.timeline-item:first-child .timeline-content {
-    margin-top: 0;
+/* 비전과 가치 섹션 */
+.vision-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
 }
 
-/* Hover effect */
-.timeline-item:hover .timeline-content {
-    transform: scale(1.02);
-    transition: transform 0.2s ease-in-out;
+.vision-section h2 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .timeline {
-        padding: 0 20px;
-    }
-
-    .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .timeline-year {
-        width: auto;
-        margin-bottom: 10px;
-    }
+.vision-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
 }
+
+.vision-line {
+    width: 50%;
+    margin: 0 auto 30px auto;
+    border-top: 1px solid #333;
+}
+
+.vision-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 텍스트 섹션 위치 조정 */
+.text-section {
+    width: 55%;
+    padding-right: 30px;
+}
+
+/* 아이콘 컨테이너 위치 및 크기 조정 */
+.icon-container {
+    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/* 아이콘 크기 확대 */
+.icon img {
+    width: 100px;
+    height: 100px;
+}
+/* 두 번째 섹션 - 비욘드더바운더리가 하는 일 배경색 설정 및 여백 추가 */
+.second-page {
+    background-color: #FFF5E1; /* 연한 주황색 배경 */
+    padding: 50px 400px; /* 상하 여백 */
+    margin-top: 20px; /* 첫 번째 섹션과의 분리 */
+    padding-bottom: 50px;
+}
+.second-page .container {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    padding-left: 0px; /* 왼쪽에 여백 추가 */
+}
+
+.second-page .text-section {
+    max-width: 1000px; /* 텍스트 최대 너비 */
+    text-align: center; /* 중앙 정렬 유지 */
+    margin-left: 0; /* 왼쪽 여백 조정 */
+}
+
+
