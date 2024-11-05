@@ -5,11 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond the Boundary</title>
     <link rel="stylesheet" href="WP1_2216232_이미지.css">
-    <link rel="icon" href="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/2216232_btb.ico" type="image/2216232_x-icon">
-    <link rel="shortcut icon" href="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/2216232_btb.ico" type="image/2216232_x-icon">
+    <link rel="icon" href="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/2216232_btb.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/2216232_btb.ico" type="image/x-icon">
+    <style>
+        /* 기본 초기화 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        /* 배경 이미지 설정 */
+        .content-section {
+            background-image: url('C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/2216232_배경.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 300px;
+            color: #fff;
+            position: relative;
+        }
+
+        /* 반투명 오버레이 */
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* 어두운 투명도 추가 */
+        }
+
+        .content-section h1, .content-section h2, .content-section p {
+            position: relative;
+            z-index: 1;
+        }
+
+        .title {
+            font-size: 60px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1.5s forwards;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1.5s forwards 0.5s;
+        }
+
+        .text-content p {
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1.5s forwards 1s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 추가 스타일 */
+        .explore-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #2D74AF;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .explore-button:hover {
+            background-color: #1b4f7f;
+        }
+
+        /* 섹션 및 푸터 스타일 */
+        .second-page {
+            background-color: #FFF5E1;
+            padding: 60px 20px;
+            text-align: center;
+            color: #333;
+        }
+        .vision-section {
+            background-color: #FFE4B5;
+            padding: 60px 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            font-size: 14px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .footer-info p {
+            margin: 0;
+            color: #ccc;
+        }
+
+        .footer .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!-- 고정 헤더 섹션 -->
+    <!-- 헤더 섹션 -->
     <header class="header">
         <img src="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/2216232_btb.logo.png" alt="로고">
         <nav>
@@ -55,12 +179,13 @@
 
     <!-- 첫 번째 섹션 -->
     <section class="content-section">
-        <h1 class="title appear">BEYOND THE BOUNDARY</h1>
-        <h2 class="subtitle appear">경계를 넘어 통합을 이루는 전진기지</h2>
-        <div class="text-content appear">
+        <h1 class="title">BEYOND THE BOUNDARY</h1>
+        <h2 class="subtitle">경계를 넘어 통합을 이루는 전진기지</h2>
+        <div class="text-content">
             <p>비욘드더바운더리는 한국 사회의 분열과 단절을 극복하고 나아가 사회통합을 실현하고 미래 통일을 준비하고 있는 비영리단체입니다.</p>
             <p>사회통합에 기여할 수 있는 북한이탈주민, 청년활동가와 신진연구자들을 위한 클러스터를 구축하고 체계적인 지원을 제공함으로써 한반도 통일과 남북 통합에 기여하고 한국 사회의 미래를 이끌어 갈 차세대 청년들을 지원하는 사업을 목적으로 하고 있습니다.</p>
         </div>
+        <button class="explore-button">더 알아보기</button>
     </section>
 
     <!-- 두 번째 섹션 -->
@@ -116,9 +241,10 @@
 
                 <!-- 소개 아이콘 -->
                 <div class="icon">
-                    <a href="WP1_2216232_이미지_history.html"></a>
+                    <a href="WP1_2216232_이미지_history.html">
                     <img src="C:/Users/SM-PC/OneDrive/바탕 화면/웹프/web_mid/image/2216232_introduce.png" alt="소개">
                     <div class="icon-title">소개</div>
+                </a>
                     <div class="submenu">
                         <a href="#">비더비 소개</a>
                         <a href="#">정관</a>
